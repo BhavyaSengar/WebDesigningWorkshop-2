@@ -13,7 +13,20 @@
 //     console.log(key+" : "+student[key]);
 // }
 
-let number = [10,20,30,40];
-for(let value of number){
-    console.log(value);
+// let number = [10,20,30,40];
+// for(let value of number){
+//     console.log(value);
+// }
+
+function getData(){
+    return new Promise(resolve=>{
+        setTimeout(()=>{
+            resolve("Data Recived");
+        },2000);
+    });
 }
+async function showData(){
+    let result = await getData();
+    console.log(result);
+}
+showData();
