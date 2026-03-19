@@ -18,15 +18,22 @@
 //     console.log(value);
 // }
 
-function getData(){
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve("Data Recived");
-        },2000);
-    });
+// function getData(){
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve("Data Recived");
+//         },2000);
+//     });
+// }
+// async function showData(){
+//     let result = await getData();
+//     console.log(result);
+// }
+// showData();
+
+try{
+    let x= y+10;
 }
-async function showData(){
-    let result = await getData();
-    console.log(result);
+catch(error){
+    console.log("Error Occured")
 }
-showData();
