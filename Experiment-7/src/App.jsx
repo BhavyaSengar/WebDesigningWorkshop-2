@@ -11,9 +11,9 @@ function App() {
   return (
     <div className='container'>
     <h1>Student Information</h1>
-    <Invite name="Bhavya Sengar" branch={"Computer Science"} marks={85}/>
-    <Invite name="Sarvagya Parashar" branch={"Computer Science"} marks={75}/>
-    <Invite name="Ayush Singh" branch={"Computer Science"} marks={95}/>
+    <Invite name="Bhavya Sengar" branch={"Computer Science"} marks={95}/>
+    <Invite name="Divyansh Saxena" branch={"Computer Science"} marks={85}/>
+    <Invite name="Ayush Singh" branch={"Computer Science"} marks={90}/>
     </div>
   )
 }
