@@ -33,8 +33,12 @@ function App() {
         <button onClick={decrement}>Decrement (-)</button>
         <br /><br />
         <button onClick={reset}>Reset</button>
+        <div class="footer">
+       <p>Copyright © Bhavya Sengar - 2503201000397 - CSE-14</p>
+       </div>
       </div>
     </div>
+    
   );
 }
 
