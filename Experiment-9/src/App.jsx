@@ -9,10 +9,8 @@ function App() {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
-  // Store Registered Users
   const [users, setUsers] = useState([]);
 
-  // Form Validation
   const validateForm = () => {
     let newErrors = {};
 
@@ -33,7 +31,6 @@ function App() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Form Submit
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -43,12 +40,10 @@ function App() {
         email: email,
       };
 
-      // Add new user to list
       setUsers([...users, newUser]);
 
       setSubmitted(true);
 
-      // Clear fields
       setName("");
       setEmail("");
       setPassword("");
@@ -94,7 +89,6 @@ function App() {
           <p className="success">Registration Successful!</p>
         )}
 
-        {/* Registered Users Section */}
         {users.length > 0 && (
           <div className="user-box">
             <h3>Registered Users</h3>
@@ -108,6 +102,11 @@ function App() {
             </ul>
           </div>
         )}
+
+        <div class="footer">
+          <p>Copyright © Bhavya Sengar - 2503201000397 - CSE-14</p>
+        </div>
+
       </div>
     </div>
   );
