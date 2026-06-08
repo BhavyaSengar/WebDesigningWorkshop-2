@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavya's Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Bhavya's Shop</div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="cart" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to Bhavya's Shop</h1>
+            <p>Your One-Stop Destination for Quality Products</p>
+            <a href="#products">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Featured Products</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Products..."
+        >
+
+        <div class="product-grid">
+
+            <div class="product-card" data-name="Laptop">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop" alt="Laptop">
+                <h3>Laptop</h3>
+                <p>₹50,000</p>
+                <button onclick="addToCart('Laptop',50000)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Smart Watch">
+                <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>₹4,000</p>
+                <button onclick="addToCart('Smart Watch',4000)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Headphones">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop" alt="Headphones">
+                <h3>Headphones</h3>
+                <p>₹2,000</p>
+                <button onclick="addToCart('Headphones',2000)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Shoes">
+                <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shoes">
+                <h3>Shoes</h3>
+                <p>₹3,000</p>
+                <button onclick="addToCart('Shoes',3000)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Camera">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop" alt="Camera">
+                <h3>Camera</h3>
+                <p>₹25,000</p>
+                <button onclick="addToCart('Camera',25000)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Mobile Phone">
+                <img src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mobile Phone">
+                <h3>Mobile Phone</h3>
+                <p>₹18,000</p>
+                <button onclick="addToCart('Mobile Phone',18000)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Bluetooth Speaker">
+                <img src="https://loremflickr.com/600/600/bluetooth-speaker" alt="Bluetooth Speaker">
+                <h3>Bluetooth Speaker</h3>
+                <p>₹2,500</p>
+                <button onclick="addToCart('Bluetooth Speaker',2500)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Gaming Mouse">
+                <img src="https://images.pexels.com/photos/28779688/pexels-photo-28779688.jpeg" alt="Gaming Mouse">
+                <h3>Gaming Mouse</h3>
+                <p>₹1,200</p>
+                <button onclick="addToCart('Gaming Mouse',1200)">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+
+        <p>
+            Bhavya's Shop is a modern e-commerce website developed using HTML,
+            CSS and JavaScript. It includes product search, shopping cart,
+            responsive layout and clean UI design.
+        </p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+
+        <form>
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                rows="5"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </div>
+
+        <p>
+            Designed & Developed by Bhavya Sengar
+            <br>
+            Roll No. - 2503201000397 | CSE - 14
+        </p>
+    </footer>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+
+            <button onclick="toggleCart()">
+                ✕
+            </button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-footer">
+            <h3 id="cartTotal">Total: ₹0</h3>
+
+            <button class="checkout-btn">
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <div
+        class="overlay"
+        id="overlay"
+        onclick="toggleCart()">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
